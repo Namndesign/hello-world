@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NLHD | Photography</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#home" onclick="openSection(0)"><img id="logo" src="img/logo.svg" width="80px" alt="logo"></a>
+        <div class="nav-link" id="ori-nav-link">
+            <a onclick="openSection(0); closeLightbox()" href="#home">Home</a>
+            <a onclick="openSection(1); closeLightbox()" href="#portfolio">Portfolio</a>
+            <a onclick="openSection(2); closeLightbox()" href="#aboutus">About Us</a>
+            <a onclick="openSection(3); closeLightbox()" href="#gear">Gear</a>
+            <a onclick="openSection(4); closeLightbox()" href="#story">Story</a>
+            <a onclick="openSection(5); closeLightbox()" href="#contact">Contact</a>
+        </div>
+        <div class="nav-icon" id="ori-nav-icon">
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png" alt=""></a>
+            <a href="https://twitter.com/" target="_blank"><img src="img/twitter.png" alt="" ></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt=""></a>
+        </div>
+        <div class="mobile-nav-btn" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="mobile-nav-link">
+            <a class="mobile-nav-anchor" onclick="openSection(0); toggleNav(); closeLightbox()" href="#home">Home</a>
+            <a class="mobile-nav-anchor" onclick="openSection(1); toggleNav(); closeLightbox()" href="#portfolio">Portfolio</a>
+            <a class="mobile-nav-anchor" onclick="openSection(2); toggleNav(); closeLightbox()" href="#aboutus">About Us</a>
+            <a class="mobile-nav-anchor" onclick="openSection(3); toggleNav(); closeLightbox()" href="#gear">Gear</a>
+            <a class="mobile-nav-anchor" onclick="openSection(4); toggleNav(); closeLightbox()" href="#story">Story</a>
+            <a class="mobile-nav-anchor" onclick="openSection(5); toggleNav(); closeLightbox()" href="#contact">Contact</a>
+            <a href="https://www.facebook.com/" class="mobile-nav-icon" target="_blank"><img src="img/facebook.png" alt=""></a>
+            <a href="https://twitter.com/" class="mobile-nav-icon" target="_blank"><img src="img/twitter.png" alt="" ></a>
+            <a href="https://www.instagram.com/" class="mobile-nav-icon" target="_blank"><img src="img/instagram.png" alt=""></a>
+        </div>
+    </nav>
+    <main>
+        <section id="home">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum, consectetur placeat inventore totam dignissimos voluptatum aspernatur nam, repellat corporis distinctio, rem, assumenda. Sit earum dicta tenetur, fugiat mollitia voluptatum!</p>
+            <img src="img/logo.svg" width="100%" alt="">
+        </section>
+        <section id="portfolio">
+            <div class="portfolio-column">
+                <div class="portfolio-column-item">
+                    <img src="img/1920/bike-2229835_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(1)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/bike-1505039_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(2)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/buddhist-3984946_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(3)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/dog-1507697_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(4)">
+                </div>
+            </div>
+            <div class="portfolio-column">
+                <div class="portfolio-column-item">
+                    <img src="img/1920/donuts-2862952_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(5)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/food-3333646_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(6)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/girl-428100_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(7)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/hanoi-1528199_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(8)">
+                </div>
+            </div>
+            <div class="portfolio-column">
+                <div class="portfolio-column-item">
+                    <img src="img/1920/hanoi-599202_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(9)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/hanoi-701176_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(10)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/hanoi-street-food-3559142_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(11)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/heartsickness-428103_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(12)">
+                </div>
+            </div>
+            <div class="portfolio-column">
+                <div class="portfolio-column-item">
+                    <img src="img/1920/landscape-740868_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(13)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/lotus-3524697_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(14)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/market-woman-1072242_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(15)">
+                </div>
+                <div class="portfolio-column-item">
+                    <img src="img/1920/pagoda-167616_1920.jpg" alt="<!--textlater-->" width="100%" onclick="openLightbox(); currentSlide(16)">
+                </div>
+            </div>
+        </section>
+        <div id="portfolio-lightbox">
+            <span id="close" onclick="closeLightbox()">&times;</span>
+            <div class="portfolio-lightbox-content">
+                <div class="slides">
+                    <img src="img/1920/bike-1505039_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/bike-2229835_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/buddhist-3984946_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/dog-1507697_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/donuts-2862952_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/food-3333646_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/girl-428100_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/hanoi-1528199_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/hanoi-599202_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/hanoi-701176_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/hanoi-street-food-3559142_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/heartsickness-428103_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/landscape-740868_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/lotus-3524697_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/market-woman-1072242_1920.jpg" width="100%">
+                </div>
+                <div class="slides">
+                    <img src="img/1920/pagoda-167616_1920.jpg" width="100%">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="portfolio-lightbox-overlay" onclick="closeLightbox()"></div>
+        </div>
+        <section id="aboutus">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum, consectetur placeat inventore totam dignissimos voluptatum aspernatur nam, repellat corporis distinctio, rem, assumenda. Sit earum dicta tenetur, fugiat mollitia voluptatum!</p>
+        </section>
+        <section id="gear">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum, consectetur placeat inventore totam dignissimos voluptatum aspernatur nam, repellat corporis distinctio, rem, assumenda. Sit earum dicta tenetur, fugiat mollitia voluptatum!</p>
+        </section>
+        <section id="story">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum, consectetur placeat inventore totam dignissimos voluptatum aspernatur nam, repellat corporis distinctio, rem, assumenda. Sit earum dicta tenetur, fugiat mollitia voluptatum!</p>
+        </section>
+        <section id="contact">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum, consectetur placeat inventore totam dignissimos voluptatum aspernatur nam, repellat corporis distinctio, rem, assumenda. Sit earum dicta tenetur, fugiat mollitia voluptatum!</p>
+        </section>
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>

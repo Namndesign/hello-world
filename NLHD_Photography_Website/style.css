@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: main-condensed;
+    src: url(fonts/DDCHardware-Condensed.otf)
+}
+
+
+
+/* overall */
+a {
+    text-decoration: none;
+    color: #0c0c0c;
+}
+body {
+    /*display: flex;*/
+    position: relative;
+}
+
+
+nav {
+    height: 100vh;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 4%;
+    transition: 0.5s;
+    background-color: #fff;
+    z-index: 1000;
+    position: fixed;
+    box-shadow: 1px 0 10px 5px rgba(0,0,0,0.05);
+}
+main {
+    width: 85%;
+    position: relative;
+    float: right;
+    top: 20px;
+}
+section {
+    position: absolute;
+    padding: 80px 5%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    animation: fade 1s;
+}
+@keyframes fade {
+    from { opacity: 0; transform: translateX(-50%)}
+    to { opacity: 1; transform: translateX(0)}
+}
+#home {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#portfolio {
+    transition: 0.5s;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio-column {
+    width: 22%;
+    margin: 5px;
+    transition: 1s ease-out;
+}
+.portfolio-column-item {
+    position: relative;
+    margin: 5px 0;
+}
+.portfolio-column-item img {
+    border-radius: 3px;
+    filter: grayscale(100%) contrast(150%);
+    transition: 1s;
+    cursor: pointer;
+}
+.portfolio-column-item img:hover {
+    filter: none;
+}
+/*.portfolio-column-item::before {
+    content: '+';
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.5);
+    color: aliceblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+}*/
+/*.portfolio-column-item:hover::before {
+    opacity: 1;
+}*/
+
+
+#portfolio-lightbox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio-lightbox-content {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    z-index: 999;
+}
+.slides {
+    user-select: none;
+}
+#close {
+    color: black;
+    position: absolute;
+    top: 30px; right: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: transparent;
+    width: 60px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    transition: 0.3s;
+    z-index: 998;
+}
+#close:hover, #close:focus {
+    color: aliceblue;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: black;
+}
+.portfolio-lightbox-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+.slides {
+    display: none;
+    animation: slides 0.5s;
+}
+@keyframes slides {
+    from { opacity: 0.6 }
+    to { opacity: 1 }
+}
+.slides img {
+    display: block;
+}
+.next, .prev {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    color: white;
+    transition: 0.5s ease;
+    padding: 20px;
+    height: 100%;
+    display: block;
+    line-height: 50vh;
+    width: 40%;
+    user-select: none;
+    background-image: none;
+}
+.next {
+    right: 0;
+    text-align: right;
+}
+.next:hover {
+    color: white;
+    background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.5));
+}
+.prev:hover {
+    color: white;
+    background-image: linear-gradient(to left, transparent, rgba(0,0,0,0.5));
+}
+
+
+
+
+.nav-link {
+    margin-top: 150px;
+}
+.nav-link a {
+    font-family: main-condensed;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+.nav-link a:hover {
+    text-decoration: underline;
+    color: black;
+}
+.nav-icon {
+    margin-top: 100px;
+}
+.nav-icon a {
+    display: block;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+.nav-icon a:hover {
+    opacity: 1;
+}
+#mobile-nav-link {
+    display: none;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        width: 100%;
+        padding: 20px 10%;
+        align-items: center;
+        justify-content: space-between
+    }
+    #logo {
+        transform: rotate(90deg);
+        width: 50px;
+    }
+    .nav-link {
+        margin-top: 0;
+    }
+    .nav-link a {
+        display: inline-block;
+        margin-bottom: 0;
+        padding: 10px;
+    }
+    .nav-icon {
+        margin-top: 0;
+    }
+    .nav-icon a {
+        display: inline-block;
+        margin-bottom: 0;
+        padding: 10px
+    }
+    main {
+        width: 100%;
+    }
+    #mobile-nav-link {
+        display: none;
+    }
+    .portfolio-column {
+        width: 48%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    nav {
+        display: block;
+        height: 100px;
+        width: 100%;
+        padding: 10px 10%;
+    }
+    #ori-nav-link {
+        display: none;
+    }
+    #ori-nav-icon {
+        display: none;
+    }
+    .mobile-nav-btn {
+        position: absolute;
+        right: 10%;
+        top: 40px;
+        cursor: pointer;
+        display: block;
+    }
+    .mobile-nav-btn span {
+        background-color: black;
+        height: 3px;
+        width: 30px;
+        display: block;
+        margin-bottom: 5px;
+    }
+    #mobile-nav-link {
+        background-color: #fff;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: none;
+        animation: fade .5s;
+        padding-bottom: 40px;
+        border-right: 3px solid black
+    }
+    .mobile-nav-anchor {
+        font-family: main-condensed;
+        display: block;
+        font-size: 20px;
+        transition: 0.5s;
+        text-align: right;
+        padding: 10px 20px;
+    }
+    .mobile-nav-anchor:hover {
+        background-color: black;
+        color: aliceblue;
+    }
+    .mobile-nav-icon {
+        display: inline-block;
+        float: right;
+        padding: 20px;
+        margin-right: 20px;
+        background-color: white;
+    }
+    .mobile-nav-icon:hover {
+        background-color: none;
+        filter: invert(100%);
+    }
+    
+    .portfolio-column {
+        width: 100%;
+    }
+    
+}
