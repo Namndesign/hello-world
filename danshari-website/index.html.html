@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css" />
+</head>
+
+<body>
+    <section id="nav" class="nav">
+        <div class="container">
+            <div class="navitem navlink four columns">
+                <div class="link-container">
+                    <a onclick="openAboutUs()" href="#">About Us</a>
+                    <div class="sublink">
+                        <a href="#" onclick="openOurStory()" class="subitem">Our Story</a>
+                        <a href="#" onclick="openDesigners()" class="subitem">Designers</a>
+                    </div>
+                </div>
+                <div class="link-container">
+                    <a href="#" onclick="openProduct()">Products</a>
+                    <div class="sublink">
+                        <a href="#" onclick="openCategoryContent(0)" class="subitem">Mattress</a>
+                        <a href="#" onclick="openCategoryContent(1)" class="subitem">Bed sheet</a>
+                        <a href="#" onclick="openCategoryContent(2)" class="subitem">Pillow</a>
+                        <a href="#" onclick="openCategoryContent(3)" class="subitem">Blanket</a>
+                        <a href="#" onclick="openCategoryContent(4)" class="subitem">Best seller</a>
+                        <a href="#" onclick="openCategoryContent(5)" class="subitem">New product</a>
+                    </div>
+                </div>
+                <div class="link-container">
+                    <a href="#" onclick="openShowroomMap()">Showrooms</a>
+                    <div class="sublink">
+                        <a href="#" onclick="openHanoiShowroom()" class="subitem">Ha Noi</a>
+                        <a href="#" class="subitem">Ho Chi Minh</a>
+                        <a href="#" class="subitem">Da Nang</a>
+                        <a href="#" class="subitem">Nha Trang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navitem navlogo">
+                <img src="imgs/logo.svg" onclick="window.location.reload()">
+            </div>
+            <div class="navitem navicon">
+                <a class="icon search" href="#">
+                    <input class="search-bar" type="search" placeholder=" need something ...">
+                    <img id="search-button" src="imgs/search.svg" onclick="searchbar()">
+                </a>
+                <a class="icon" onclick="openMyCart()" href="#">
+                    <img src="imgs/cart.svg">
+                </a>
+                <a class="icon loginregister" href="#">
+                    <img src="imgs/user.svg">
+                    <div class="sublink">
+                        <a onclick="openLogin()" class="subitem">Login</a>
+                        <a onclick="openRegister()" class="subitem">Register</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <section class="landing" id="hero">
+        <img src="imgs/hero.png">
+    </section>
+    <section class="landing container" id="service">
+        <div class="blurb four columns">
+            <img src="imgs/blurb1.svg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod maiores sed aut beatae ratione, deserunt, nihil quis nobis illum et eum dolorem.</p>
+        </div>
+        <div class="blurb four columns">
+            <img src="imgs/blurb2.svg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod maiores sed aut beatae ratione, deserunt, nihil quis nobis illum et eum dolorem.</p>
+        </div>
+        <div class="blurb four columns">
+            <img src="imgs/blurb3.svg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod maiores sed aut beatae ratione, deserunt, nihil quis nobis illum et eum dolorem.</p>
+        </div>
+    </section>
+    <section class="landing container" id="showcase1">
+        <div class="title seven columns">
+            <h1>Alma Collection</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eum.</p>
+        </div>
+        <div class="contentimg eight offset-by-four columns" onclick="openCollection()">
+            <div class="mainimg">
+                <div class="overlay" >View Collection +</div>
+                <img src="imgs/showcase1.png" alt="" class="onblurimg">
+            </div>
+            <img class="borderimg" onmouseover="borderimgMouseover(0)" onmouseout="borderimgMouseout(0)" src="imgs/showcase-border1.svg" alt="">
+        </div>
+    </section>
+    <section class="landing container" id="showcase2">
+        <div class="contentimg eight columns" onclick="openCollection()">
+            <div class="mainimg">
+                <div class="overlay" >View Collection +</div>
+                <img src="imgs/showcase2.png" alt="" class="onblurimg">
+            </div>
+            <img class="borderimg" onmouseover="borderimgMouseover(1)" onmouseout="borderimgMouseout(1)" src="imgs/showcase-border2.svg" alt="">
+        </div>
+        <div class="title seven columns">
+            <h1>Dessia Collection</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eum.</p>
+        </div>
+    </section>
+    <section class="landing" id="feature">
+        <h1>Best <br>Sellers</h1>
+        <div class="gallery-container">
+            <div class="gallery">
+                <div class="item"><img src="imgs/feature2.png">
+                    <p>Shell Duvet Cover in Blush</p>
+                </div>
+                <div class="item"><img src="imgs/feature1.png">
+                    <p>Shell Duvet Cover in Blush</p>
+                </div>
+                <div class="item"><img src="imgs/feature2.png">
+                    <p>Shell Duvet Cover in Blush</p>
+                </div>
+                <div class="item"><img src="imgs/feature1.png">
+                    <p>Shell Duvet Cover in Blush</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="landing container" id="upcoming">
+        <h1>new product</h1>
+        <div class="upcoming-container">
+           
+            <div class="item"><img src="imgs/upcoming1.png">
+                <p>Shell Duvet Cover in Blush</p>
+            </div>
+            <div class="item"><img src="imgs/upcoming2.png">
+                <p>Shell Duvet Cover in Blush</p>
+            </div>
+            <div class="item"><img src="imgs/upcoming3.png">
+                <p>Shell Duvet Cover in Blush</p>
+            </div>
+            <div class="item"><img src="imgs/upcoming1.png">
+                <p>Shell Duvet Cover in Blush</p>
+            </div>
+            <div class="item"><img src="imgs/upcoming2.png">
+                <p>Shell Duvet Cover in Blush</p>
+            </div>
+            <div class="item"><img src="imgs/upcoming3.png">
+                <p>Shell Duvet Cover in Blush</p>
+            </div>
+        </div>
+    </section>
+    <section class="landing container" id="footer-line">
+        <img class="twelve columns" src="imgs/footer-line.svg">
+        <p class="twelve columns">Sleeping is not time wasting</p>
+    </section>
+    <section id="login">
+        <h1>Login</h1>
+        <form action="#">
+            <div class="formitem">
+                <label for="username">Username</label>
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="formitem">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password">
+            </div>
+        </form>
+        <div class="login-section">
+            <div class="rememberme">
+                <input type="radio">
+                <span for="radio">Remember Me</span>
+            </div>
+            <button>Login</button>
+        </div>
+        <hr>
+        <button class="social facebook">Login with Facebook</button>
+        <button class="social google">Login with Google</button>
+        <hr>
+        <a href="#">Creat an Account</a>
+        <a href="#">Forgot your password</a>
+    </section>
+    <section id="register">
+        <h1>Register</h1>
+        <form action="#">
+            <div class="formitem">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="formitem">
+                <label for="email">Username</label>
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="formitem">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password">
+            </div>
+            <div class="formitem">
+                <label for="password">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password">
+            </div>
+            <button>Creat an account</button>
+        </form>
+    </section>
+    <section id="showroom-map" class="container">
+        <h1>Our Showroom</h1>
+        <img src="imgs/showroom-map.png">
+        <p class="hanoi four columns">
+            <span onclick="openHanoiShowroom()">52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span> <br>
+            <span>52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span> <br>
+            <span>52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span> <br>
+        </p>
+        <p class="danan four columns">
+            <span>52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span><br>
+            <span>52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span>
+        </p>
+        <p class="hcmci four columns">
+            <span>52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span><br>
+            <span>52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span><br>
+            <span>52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span>
+        </p>
+        <p class="ntran three columns">
+            <span>52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span><br>
+            <span>52 Truong Dinh, phường O Cho Dua, quan Dong Da, Ha Noi</span><br>
+        </p>
+        <button>Go to map >></button>
+    </section>
+    <section id="HanoiShowroom" class="container">
+        <h1>Our Showroom</h1>
+        <div class="content twelve columns">
+            <div class="image">
+                <img src="imgs/HanoiShowroomImage.png">
+            </div>
+            <div class="info">
+                <h3>Address</h3>
+                <p>52 Truong Dinh, O Cho Dua, quan Dong Da district, Ha Noi</p>
+                <h3>Hour</h3>
+                <p>Monday-Friday: 10am-9pm <br>
+                    Saturday: 10am-8pm <br>
+                    Sunday: 11am-6pm</p>
+                <h3>Contact</h3>
+                <p> Dansharihanoi@gmail.com <br>https://www.facebook.com/danshari.hanoi/
+                    098 4456 789</p>
+            </div>
+        </div>
+    </section>
+    <section id="myCart" class="container">
+        <div class="preview seven columns">
+            <div class="previewitem">
+                <img src="imgs/preview1.png" class="three columns">
+                <div class="info nine columns">
+                    <p class="">Shell Duvet Cover in Blush</p>
+                    <div class="amount">
+                        <div class="minusplus">
+                            <span onclick="add(-1,0)">&#45;</span>
+                            <p class="amount-number">0</p>
+                            <span onclick="add(1,0)">&#43;</span>
+                        </div>
+                        <div class="size">180 x 150 cm</div>
+                        <div class="color color1"></div>
+                    </div>
+                    <div class="price">
+                        <p>1220.00$</p>
+                        <img src="imgs/pricetag.svg">
+                        <p>Delete <span onclick="deleteItem(0)">x</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="previewitem">
+                <img src="imgs/preview2.png" class="three columns">
+                <div class="info nine columns">
+                    <p class="">Shell Duvet Cover in Blush</p>
+                    <div class="amount">
+                        <div class="minusplus">
+                            <span onclick="add(-1,1)">&#45;</span>
+                            <p class="amount-number">0</p>
+                            <span onclick="add(1,1)">&#43;</span>
+                        </div>
+                        <div class="size">180 x 150 cm</div>
+                        <div class="color color2"></div>
+                    </div>
+                    <div class="price">
+                        <p>1220.00$</p>
+                        <img src="imgs/pricetag.svg">
+                        <p>Delete <span onclick="deleteItem(1)">x</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="previewitem">
+                <img src="imgs/preview3.png" class="three columns">
+                <div class="info nine columns">
+                    <p class="">Shell Duvet Cover in Blush</p>
+                    <div class="amount">
+                        <div class="minusplus">
+                            <span onclick="add(-1,2)">&#45;</span>
+                            <p class="amount-number">0</p>
+                            <span onclick="add(1,2)">&#43;</span>
+                        </div>
+                        <div class="size">180 x 150 cm</div>
+                        <div class="color color3"></div>
+                    </div>
+                    <div class="price">
+                        <p>1220.00$</p>
+                        <img src="imgs/pricetag.svg">
+                        <p>Delete <span onclick="deleteItem(2)">x</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="summary five columns u-pull-right">
+            <h5>Summary</h5>
+            <div class="summaryitem">
+                <span>Subtotal</span>
+                <span>3660.00$</span>
+            </div>
+            <div class="summaryitem">
+                <span>Discount</span>
+                <span>300.00$</span>
+            </div>
+            <hr>
+            <div class="summaryitem">
+                <div class="inputfield">
+                    <input type="text" placeholder="PROMOTION CODE">
+                    <p id="youhavereceived">You have received a discount</p>
+                </div>
+                <button onclick="document.querySelector('#youhavereceived').style.opacity = 1">Apply</button>
+            </div>
+            <hr>
+            <div class="summaryitem">
+                <span>Total Price</span>
+                <span>3360.00$</span>
+            </div>
+            <hr>
+            <button class="finalize" onclick="openCheckout1()">Check Out Now</button> <br>
+            <button class="finalize">Continue Shopping</button>
+        </div>
+    </section>
+    <section id="checkout1" class="container">
+        <img src="imgs/checkout1.svg" class="six">
+        <div class="checkout-info twelve columns">
+            <div class="left six columns">
+                <div class="inputitem"><label>Buyer</label><input type="text"></div>
+                <div class="inputitem"><label>Email</label><input type="text"></div>
+                <div class="inputitem"><label>Note</label><input class="textarea" type="text"></div>
+            </div>
+            <div class="right six columns u-pull-right">
+                <div class="inputitem"><label>Buyer</label><input type="text"></div>
+                <div class="inputitem"><label>Email</label><input type="text"></div>
+                <div class="inputitem"><label>Phone number</label><input type="text"></div>
+                <div class="inputitem"><label>Province/City</label><input class="not-full-width" type="text"><label>District</label><input class="not-full-width" type="text"></div>
+                <div class="inputitem"><label>Address</label><input type="text"></div>
+                <div class="inputitem"><label>Deliver to</label><input type="radio">Apartment/Home<input type="radio">Office</div>
+            </div>
+        </div>
+        <button onclick="openCheckout2()">Check Out >></button>
+    </section>
+    <section id="checkout2" class="container">
+        <img src="imgs/checkout2.svg" class="six">
+        <div class="checkout-info twelve columns">
+            <div class="left six columns">
+                <p>Method of Payment</p>
+                <form action="#">
+                    <input type="radio"> Payment in cash <br> <br>
+                    <input type="radio"> Visa, Master, JCB <br> <br>
+                    <img src="imgs/payment-method1.png" width="70px">
+                    <img src="imgs/payment-method2.png" width="70px">
+                    <img src="imgs/payment-method3.png" width="70px"> <br> <br>
+                    <input type="radio"> ATM/Internet Banking <br> <br>
+                    <img src="imgs/payment-method4.png" width="70px">
+                    <img src="imgs/payment-method5.png" width="70px">
+                    <img src="imgs/payment-method6.png" width="70px">
+                    <img src="imgs/payment-method7.png" width="70px">
+                    <img src="imgs/payment-method8.png" width="70px">
+                    <img src="imgs/payment-method9.png" width="70px">
+                    <img src="imgs/payment-method10.png" width="70px">
+                    <img src="imgs/payment-method11.png" width="70px">
+                    <img src="imgs/payment-method12.png" width="70px">
+                    <img src="imgs/payment-method13.png" width="70px">
+                    <img src="imgs/payment-method14.png" width="70px">
+                </form>
+            </div>
+            <div class="right six columns">
+                <div class="info-confirm">
+                    <h6>Infomation Confirm</h6>
+                    <p>Linda Cardellini <br>2206 S Christopher Columbus Blvd, Philadelphia <br>Linda.or.stelse@gmail.com</p>
+                    <span>0915 856 489</span>
+                </div>
+                <div class="checkout-confirm">
+                    <h6>Check Out</h6>
+                    <div class="preview"><img src="imgs/final-checkout-preview1.png">
+                        <p class="final-checkout-preview-name">Shell Duvet Cover in Blush</p>
+                        <p>1</p>
+                        <p>120.00$</p>
+                    </div>
+                    <div class="preview"><img src="imgs/final-checkout-preview2.png">
+                        <p class="final-checkout-preview-name">Shell Duvet Cover in Blush</p>
+                        <p>1</p>
+                        <p>520.00$</p>
+                    </div>
+                    <div class="preview"><img src="imgs/final-checkout-preview3.png">
+                        <p class="final-checkout-preview-name">Shell Duvet Cover in Blush</p>
+                        <p>1</p>
+                        <p>399.00$</p>
+                    </div>
+                    <hr>
+                    <div class="preview">
+                        <p>Subtotal</p>
+                        <p>3199.00$</p>
+                    </div>
+                    <div class="preview">
+                        <p>Discount</p>
+                        <p>159.00$</p>
+                    </div>
+                    <hr>
+                    <div class="preview">
+                        <p>Total</p>
+                        <p>3040.00$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="window.location.reload()">Finish</button>
+    </section>
+    <section id="aboutus">
+        <div class="our-story container" id="ourStory">
+            <div>
+                <img class="bgimg1" src="imgs/ourStory1.png">
+                <img class="bgimg2" src="imgs/ourStory2.png">
+                <img class="bgimg3 nine columns" src="imgs/ourStory3.png">
+            </div>
+            <div>
+                <div class="bgcolor offset-by-four columns seven bgcolor1"></div>
+                <div class="bgcolor columns two bgcolor2"></div>
+                <div class="bgcolor offset-by-seven columns five bgcolor3"></div>
+                <div class="bgcolor offset-by-nine columns three bgcolor4"></div>
+            </div>
+            <div>
+                <div class="hrline six columns hrline1"></div>
+                <div class="hrline six columns hrline2"></div>
+            </div>
+            <div class="switch offset-by-four four columns">
+                <span class="switch-btn" onclick="openOurStory()">Our Story</span>
+                <span class="line"></span>
+                <span class="switch-btn" onclick="openDesigners()">Designer</span>
+            </div>
+            <div class="title title1 offset-by-seven five columns">
+                <p class="big-title">Our</p>
+                <p class="small-title">Inspiration</p>
+            </div>
+            <div class="paragraph offset-by-nine three columns">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum reprehenderit dolor dicta, nesciunt voluptatibus sit eum numquam, odit laudantium tempora fugiat, adipisci necessitatibus rem saepe at ducimus. Repellendus libero debitis vel nihil voluptatibus sunt perferendis eum unde maiores ad quas, dolorum dolores sit at laborum facilis consectetur soluta veritatis nostrum totam dignissimos. Iste praesentium cum, asperiores assumenda. Consequatur quibusdam, fuga rem dolorem atque perspiciatis obcaecati quidem praesentium, similique laudantium harum. Odit nulla inventore autem laudantium, ut, repudiandae fugiat, voluptatibus unde aut nemo debitis fuga ab quam quia ratione delectus amet quibusdam labore officiis! Exercitationem dicta ad suscipit quis omnis, deleniti.
+            </div>
+            <div class="title title2 column">
+                <p class="big-title">Our</p>
+                <p class="small-title">Vision and misson</p>
+            </div>
+            <div class="paragraph four columns">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, tempora? Esse aspernatur temporibus libero sequi sed deserunt ab labore totam. Repudiandae optio natus similique doloremque quisquam suscipit, inventore ea adipisci qui nihil quae ad distinctio quis? Excepturi aliquam quibusdam, accusantium voluptates quas maiores, perspiciatis odio eveniet reprehenderit distinctio delectus assumenda, voluptatum magnam recusandae quo ducimus earum ut iusto provident quos alias ab! Facere, voluptatibus saepe atque voluptatem placeat nemo dolorem vel maxime illum, nam aut neque corporis nostrum repellat obcaecati sapiente nesciunt sed, odio magni delectus dolor totam. Soluta optio incidunt autem ipsum, voluptas facere, provident quibusdam. Voluptatum quibusdam at eligendi dignissimos autem cupiditate unde necessitatibus obcaecati perspiciatis, quaerat omnis quasi tempora similique ratione. Molestiae corporis eos vitae soluta, placeat quo aliquid nisi perferendis optio illo officia accusamus enim iure repellendus doloribus, delectus dolor facilis. Sed soluta porro explicabo, necessitatibus earum eum. Voluptates enim fuga rem velit, quas, magni veritatis aut ut? Enim veritatis vero tempore aperiam molestias, hic alias rerum voluptatibus, dolorum deserunt aliquam magnam temporibus sit ea repellat nostrum recusandae accusantium dignissimos aspernatur ipsum, odit corrupti ipsa obcaecati distinctio. Autem, magnam, debitis. Expedita sed, harum possimus, sint id, modi doloremque dolores perferendis facilis magni quasi voluptatibus accusamus officiis?
+            </div>
+            <div class="title title3 offset-by-seven five columns">
+                <p class="big-title">Our</p>
+                <p class="small-title">GUARANTEE</p>
+            </div>
+            <div class="paragraph three offset-by-nine columns">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nobis distinctio itaque fuga placeat hic est officia molestias ullam. Ipsa, ad harum nulla perferendis amet. Incidunt eos sit accusantium, ratione quis magnam deleniti vitae! Libero, porro numquam sunt quidem nostrum sapiente molestias illo nam optio dicta voluptatum perspiciatis quasi fuga deserunt non magnam obcaecati omnis eveniet recusandae, quod cum quis tenetur voluptatem ad. Minus qui labore harum enim voluptatibus accusamus nihil voluptas iure! Minus praesentium necessitatibus tempore possimus, iste ullam!
+            </div>
+        </div>
+        <div class="designers container" id="designers">
+            <div class="switch offset-by-four four columns">
+                <span class="switch-btn" onclick="openOurStory()">Our Story</span>
+                <span class="line"></span>
+                <span class="switch-btn" onclick="openDesigners()">Designer</span>
+            </div>
+            <div class="profilepic twelve columns">
+                <div onclick="openProfileDetails(0)" class="item three columns"><div></div><p>Tamara Ralph</p></div>
+                <div onclick="openProfileDetails(1)" class="item three columns"><div></div><p>Werner Baldessarini</p></div>
+                <div onclick="openProfileDetails(2)" class="item three columns"><div></div><p>Helmut Lang</p></div>
+                <div onclick="openProfileDetails(3)" class="item three columns"><div></div><p>Jazmín Chebar</p></div>
+            </div>
+            <div class="profile twelve columns">
+                <div class="title">
+                    <span class="text two columns">Profile</span><span class="line nine columns"></span>
+                </div>
+                <div class="paragraph twelve columns">
+                    <p class="twelve paratitle columns">Tamara Ralph</p>
+                    <div class="twelve columns">
+                        <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cum, molestias tempore animi expedita sint incidunt officia eos corporis laudantium consequatur quas velit, voluptates non. Eveniet aliquam, quo sequi. Id dolorem neque ipsam suscipit quo tenetur eius quam sit minima! Voluptatem maxime unde eius ipsa quis sapiente sed, perferendis omnis corrupti ipsum quas soluta saepe voluptates porro iure, voluptas! Maiores corporis voluptas expedita porro tempora impedit sint vero a, laboriosam! Nostrum illo explicabo minima sit sapiente sed eligendi commodi quidem eaque magnam, qui ex a dignissimos error voluptates dolores natus, perspiciatis ab eveniet fuga tenetur minus maiores, inventore deleniti. Nam.</p>
+                        <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cum, molestias tempore animi expedita sint incidunt officia eos corporis laudantium consequatur quas velit, voluptates non. Eveniet aliquam, quo sequi. Id dolorem neque ipsam suscipit quo tenetur eius quam sit minima! Voluptatem maxime unde eius ipsa quis sapiente sed, perferendis omnis corrupti ipsum quas soluta saepe voluptates porro iure, voluptas! Maiores corporis voluptas expedita porro tempora impedit sint vero a, laboriosam! Nostrum illo explicabo minima sit sapiente sed eligendi commodi quidem eaque magnam, qui ex a dignissimos error voluptates dolores natus, perspiciatis ab eveniet fuga tenetur minus maiores, inventore deleniti. Nam.</p>
+                    </div>
+                </div>
+                <div class="designedby twelve columns">
+                    <div class="title twelve columns">
+                        <span class="text six columns">Designed by Ralph</span><span class="line six columns"></span>
+                    </div>
+                    <div class="designedbyGalleryContainer twelve columns">
+                        <div><img src="imgs/preview1.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/preview3.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/preview2.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/preview1.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/preview2.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/preview3.png">Shell Duvet Cover in Blush</div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile twelve columns">
+                <div class="title">
+                    <span class="text two columns">Profile</span><span class="line nine columns"></span>
+                </div>
+                <div class="paragraph twelve columns">
+                    <p class="twelve paratitle columns">Werner Baldessarini</p>
+                    <div class="twelve columns">
+                        <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cum, molestias tempore animi expedita sint incidunt officia eos corporis laudantium consequatur quas velit, voluptates non. Eveniet aliquam, quo sequi. Id dolorem neque ipsam suscipit quo tenetur eius quam sit minima! Voluptatem maxime unde eius ipsa quis sapiente sed, perferendis omnis corrupti ipsum quas soluta saepe voluptates porro iure, voluptas! Maiores corporis voluptas expedita porro tempora impedit sint vero a, laboriosam! Nostrum illo explicabo minima sit sapiente sed eligendi commodi quidem eaque magnam, qui ex a dignissimos error voluptates dolores natus, perspiciatis ab eveniet fuga tenetur minus maiores, inventore deleniti. Nam.</p>
+                        <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cum, molestias tempore animi expedita sint incidunt officia eos corporis laudantium consequatur quas velit, voluptates non. Eveniet aliquam, quo sequi. Id dolorem neque ipsam suscipit quo tenetur eius quam sit minima! Voluptatem maxime unde eius ipsa quis sapiente sed, perferendis omnis corrupti ipsum quas soluta saepe voluptates porro iure, voluptas! Maiores corporis voluptas expedita porro tempora impedit sint vero a, laboriosam! Nostrum illo explicabo minima sit sapiente sed eligendi commodi quidem eaque magnam, qui ex a dignissimos error voluptates dolores natus, perspiciatis ab eveniet fuga tenetur minus maiores, inventore deleniti. Nam.</p>
+                    </div>
+                </div>
+                <div class="designedby twelve columns">
+                    <div class="title twelve columns">
+                        <span class="text six columns">Designed by Werner</span><span class="line six columns"></span>
+                    </div>
+                    <div class="designedbyGalleryContainer twelve columns">
+                        <div><img src="imgs/designbywerner1.png">Dry Matress</div>
+                        <div><img src="imgs/designbywerner2.png">Fit Matress</div>
+                        <div><img src="imgs/designbywerner3.png">Standard Matress</div>
+                        <div><img src="imgs/designbywerner4.png">Wave Matress</div>
+                        <div><img src="imgs/designbywerner1.png">Dry Matress</div>
+                        <div><img src="imgs/designbywerner2.png">Fit Matress</div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile twelve columns">
+                <div class="title">
+                    <span class="text two columns">Profile</span><span class="line nine columns"></span>
+                </div>
+                <div class="paragraph twelve columns">
+                    <p class="twelve paratitle columns">Helmut Lang</p>
+                    <div class="twelve columns">
+                        <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cum, molestias tempore animi expedita sint incidunt officia eos corporis laudantium consequatur quas velit, voluptates non. Eveniet aliquam, quo sequi. Id dolorem neque ipsam suscipit quo tenetur eius quam sit minima! Voluptatem maxime unde eius ipsa quis sapiente sed, perferendis omnis corrupti ipsum quas soluta saepe voluptates porro iure, voluptas! Maiores corporis voluptas expedita porro tempora impedit sint vero a, laboriosam! Nostrum illo explicabo minima sit sapiente sed eligendi commodi quidem eaque magnam, qui ex a dignissimos error voluptates dolores natus, perspiciatis ab eveniet fuga tenetur minus maiores, inventore deleniti. Nam.</p>
+                        <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cum, molestias tempore animi expedita sint incidunt officia eos corporis laudantium consequatur quas velit, voluptates non. Eveniet aliquam, quo sequi. Id dolorem neque ipsam suscipit quo tenetur eius quam sit minima! Voluptatem maxime unde eius ipsa quis sapiente sed, perferendis omnis corrupti ipsum quas soluta saepe voluptates porro iure, voluptas! Maiores corporis voluptas expedita porro tempora impedit sint vero a, laboriosam! Nostrum illo explicabo minima sit sapiente sed eligendi commodi quidem eaque magnam, qui ex a dignissimos error voluptates dolores natus, perspiciatis ab eveniet fuga tenetur minus maiores, inventore deleniti. Nam.</p>
+                    </div>
+                </div>
+                <div class="designedby twelve columns">
+                    <div class="title twelve columns">
+                        <span class="text six columns">Designed by Lang</span><span class="line six columns"></span>
+                    </div>
+                    <div class="designedbyGalleryContainer twelve columns">
+                        <div><img src="imgs/designbylang1.png">DanshariBasic Fabric One-color</div>
+                        <div><img src="imgs/designbylang2.png">Danshari Minimalist Geometric</div>
+                        <div><img src="imgs/designbylang3.png">DanshariBasic Plaid Cotton</div>
+                        <div><img src="imgs/designbylang4.png">DanshariBasic Fabric One-color</div>
+                        <div><img src="imgs/designbylang1.png">DanshariBasic Fabric One-color</div>
+                        <div><img src="imgs/designbylang2.png">Danshari Minimalist Geometric</div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile twelve columns">
+                <div class="title">
+                    <span class="text two columns">Profile</span><span class="line nine columns"></span>
+                </div>
+                <div class="paragraph twelve columns">
+                    <p class="twelve paratitle columns">Jazmín Chebar</p>
+                    <div class="twelve columns">
+                        <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cum, molestias tempore animi expedita sint incidunt officia eos corporis laudantium consequatur quas velit, voluptates non. Eveniet aliquam, quo sequi. Id dolorem neque ipsam suscipit quo tenetur eius quam sit minima! Voluptatem maxime unde eius ipsa quis sapiente sed, perferendis omnis corrupti ipsum quas soluta saepe voluptates porro iure, voluptas! Maiores corporis voluptas expedita porro tempora impedit sint vero a, laboriosam! Nostrum illo explicabo minima sit sapiente sed eligendi commodi quidem eaque magnam, qui ex a dignissimos error voluptates dolores natus, perspiciatis ab eveniet fuga tenetur minus maiores, inventore deleniti. Nam.</p>
+                        <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cum, molestias tempore animi expedita sint incidunt officia eos corporis laudantium consequatur quas velit, voluptates non. Eveniet aliquam, quo sequi. Id dolorem neque ipsam suscipit quo tenetur eius quam sit minima! Voluptatem maxime unde eius ipsa quis sapiente sed, perferendis omnis corrupti ipsum quas soluta saepe voluptates porro iure, voluptas! Maiores corporis voluptas expedita porro tempora impedit sint vero a, laboriosam! Nostrum illo explicabo minima sit sapiente sed eligendi commodi quidem eaque magnam, qui ex a dignissimos error voluptates dolores natus, perspiciatis ab eveniet fuga tenetur minus maiores, inventore deleniti. Nam.</p>
+                    </div>
+                </div>
+                <div class="designedby twelve columns">
+                    <div class="title twelve columns">
+                        <span class="text six columns">Designed by Jazmín</span><span class="line six columns"></span>
+                    </div>
+                    <div class="designedbyGalleryContainer twelve columns">
+                        <div><img src="imgs/designbymerteo1.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/designbymerteo2.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/designbymerteo3.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/designbymerteo4.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/designbymerteo2.png">Shell Duvet Cover in Blush</div>
+                        <div><img src="imgs/designbymerteo1.png">Shell Duvet Cover in Blush</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="product" class="container">
+        <div class="category">
+            <div class="intro">
+                <p>Mattress</p>
+                <p>Wishing to bring comfortable mattresses and considering sleep, Danshari with our extensive experience has researched and developed a cushion to help maximize the natural curves of the body. Danshari's product lines are all made of the most advanced materials.</p>
+            </div>
+            <div class="content">
+                <div class="filter three columns">
+                    <p>Fillter by prices</p>
+                    <input type="range" min="0" max="50" step="5" value="50" id="slider1">
+                    <span>$0</span><span id="responsivePrice1">0</span><span>$50</span>
+                    <p>Categories</p>
+                    <a onclick="openCategoryContent(0)">Mattress</a>
+                    <a onclick="openCategoryContent(1)">Bed sheet</a>
+                    <a onclick="openCategoryContent(2)">Pillow</a>
+                    <a onclick="openCategoryContent(3)">Blanket</a>
+                    <a onclick="openCategoryContent(4)">Best seller</a>
+                    <a onclick="openCategoryContent(5)">New product</a>
+                </div>
+                <div class="demo nine columns" id="demos1">
+                    <div class="item item1 four columns" id="10"><img src="imgs/blanket1.png" onclick="openProductDetail(0)"><p>AYESHA pILLOW 1.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="20"><img src="imgs/blanket2.png" onclick="openProductDetail(0)"><p>DASHES PILLOW</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="30"><img src="imgs/blanket3.png" onclick="openProductDetail(0)"><p>GRIS PILLOW 4.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="50"><img src="imgs/blanket4.png" onclick="openProductDetail(0)"><p>REBECA PILLOW</p><span>$50</span><span>Add to cart</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <div class="intro">
+                <p>Bed Sheet</p>
+                <p>Wishing to bring comfortable mattresses and considering sleep, Danshari with our extensive experience has researched and developed a cushion to help maximize the natural curves of the body. Danshari's product lines are all made of the most advanced materials.</p>
+            </div>
+            <div class="content">
+                <div class="filter three columns">
+                    <p>Fillter by prices</p>
+                    <input type="range" min="0" max="50" step="5" value="50" id="slider2">
+                    <span>$0</span><span id="responsivePrice2">0</span><span>$50</span>
+                    <p>Categories</p>
+                    <a onclick="openCategoryContent(0)">Mattress</a>
+                    <a onclick="openCategoryContent(1)">Bed sheet</a>
+                    <a onclick="openCategoryContent(2)">Pillow</a>
+                    <a onclick="openCategoryContent(3)">Blanket</a>
+                    <a onclick="openCategoryContent(4)">Best seller</a>
+                    <a onclick="openCategoryContent(5)">New product</a>
+                </div>
+                <div class="demo nine columns" id="demos2">
+                    <div class="item2 item four columns" id="10"><img src="imgs/bedsheet1.png"><p>AYESHA pILLOW 1.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="10"><img src="imgs/bedsheet2.png"><p>AYESHA PILLOW 2.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="10"><img src="imgs/bedsheet3.png"><p>AYESHA PILLOW 3.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="20"><img src="imgs/bedsheet4.png"><p>AYESHA PILLOW 4.0</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="20"><img src="imgs/bedsheet5.png"><p>DASHES PILLOW</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="20"><img src="imgs/bedsheet6.png"><p>GRIS PILLOW 1.0</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="30"><img src="imgs/bedsheet7.png"><p>GRIS PILLOW 3.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="30"><img src="imgs/bedsheet8.png"><p>GRIS PILLOW 3.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="30"><img src="imgs/bedsheet9.png"><p>GRIS PILLOW 4.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="40"><img src="imgs/bedsheet10.png"><p>PEACE PILLOW 1.0</p><span>$40</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="40"><img src="imgs/bedsheet11.png"><p>PEACE PILLOW 2.0</p><span>$40</span><span>Add to cart</span></div>
+                    <div class="item2 item four columns" id="40"><img src="imgs/bedsheet12.png"><p>PEACE PILLOW 3.0</p><span>$40</span><span>Add to cart</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <div class="intro">
+                <p>Pillows</p>
+                <p>Wishing to bring comfortable mattresses and considering sleep, Danshari with our extensive experience has researched and developed a cushion to help maximize the natural curves of the body. Danshari's product lines are all made of the most advanced materials.</p>
+            </div>
+            <div class="content">
+                <div class="filter three columns">
+                    <p>Fillter by prices</p>
+                    <input type="range" min="0" max="50" step="5" value="50" id="slider1">
+                    <span>$0</span><span id="responsivePrice1">0</span><span>$50</span>
+                    <p>Categories</p>
+                    <a onclick="openCategoryContent(0)">Mattress</a>
+                    <a onclick="openCategoryContent(1)">Bed sheet</a>
+                    <a onclick="openCategoryContent(2)">Pillow</a>
+                    <a onclick="openCategoryContent(3)">Blanket</a>
+                    <a onclick="openCategoryContent(4)">Best seller</a>
+                    <a onclick="openCategoryContent(5)">New product</a>
+                </div>
+                <div class="demo nine columns" id="demos1">
+                    <div class="item item1 four columns" id="10"><img src="imgs/mattress-demo1.png"><p>AYESHA pILLOW 1.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="10"><img src="imgs/mattress-demo2.png"><p>AYESHA PILLOW 2.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="10"><img src="imgs/mattress-demo3.png"><p>AYESHA PILLOW 3.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="20"><img src="imgs/mattress-demo4.png"><p>AYESHA PILLOW 4.0</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="20"><img src="imgs/mattress-demo5.png"><p>DASHES PILLOW</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="20"><img src="imgs/mattress-demo6.png"><p>GRIS PILLOW 1.0</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="30"><img src="imgs/mattress-demo7.png"><p>GRIS PILLOW 3.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="30"><img src="imgs/mattress-demo8.png"><p>GRIS PILLOW 3.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="30"><img src="imgs/mattress-demo9.png"><p>GRIS PILLOW 4.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="40"><img src="imgs/mattress-demo10.png"><p>PEACE PILLOW 1.0</p><span>$40</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="40"><img src="imgs/mattress-demo11.png"><p>PEACE PILLOW 2.0</p><span>$40</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="40"><img src="imgs/mattress-demo12.png"><p>PEACE PILLOW 3.0</p><span>$40</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="50"><img src="imgs/mattress-demo13.png"><p>PEACE PILLOW 4.0</p><span>$50</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="50"><img src="imgs/mattress-demo14.png"><p>PEACE PILLOW 5.0</p><span>$50</span><span>Add to cart</span></div>
+                    <div class="item item1 four columns" id="50"><img src="imgs/mattress-demo15.png"><p>REBECA PILLOW</p><span>$50</span><span>Add to cart</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <div class="intro">
+                <p>Pillow</p>
+                <p>Wishing to bring comfortable mattresses and considering sleep, Danshari with our extensive experience has researched and developed a cushion to help maximize the natural curves of the body. Danshari's product lines are all made of the most advanced materials.</p>
+            </div>
+            <div class="content">
+                <div class="filter three columns">
+                    <p>Fillter by prices</p>
+                    <input type="range" min="0" max="50" step="5" value="50" id="slider3">
+                    <span>$0</span><span id="responsivePrice3">0</span><span>$50</span>
+                    <p>Categories</p>
+                    <a class="categoryA" onclick="openCategoryContent(0)">Mattress</a>
+                    <a class="categoryA" onclick="openCategoryContent(1)">Bed sheet</a>
+                    <a class="categoryA" onclick="openCategoryContent(2)">Pillow</a>
+                    <a class="categoryA" onclick="openCategoryContent(3)">Blanket</a>
+                    <a class="categoryA" onclick="openCategoryContent(4)">Best seller</a>
+                    <a class="categoryA" onclick="openCategoryContent(5)">New product</a>
+                </div>
+                <div class="demo nine columns" id="demos3">
+                    <div class="item3 item four columns" id="10"><img src="imgs/pillow1.png"><p>AYESHA pILLOW 1.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="10"><img src="imgs/pillow2.png"><p>AYESHA PILLOW 2.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="10"><img src="imgs/pillow3.png"><p>AYESHA PILLOW 3.0</p><span>$10</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="20"><img src="imgs/pillow4.png"><p>AYESHA PILLOW 4.0</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="20"><img src="imgs/pillow5.png"><p>DASHES PILLOW</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="20"><img src="imgs/pillow6.png"><p>GRIS PILLOW 1.0</p><span>$20</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="30"><img src="imgs/pillow7.png"><p>GRIS PILLOW 3.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="30"><img src="imgs/pillow8.png"><p>GRIS PILLOW 3.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="30"><img src="imgs/pillow9.png"><p>GRIS PILLOW 4.0</p><span>$30</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="40"><img src="imgs/pillow10.png"><p>PEACE PILLOW 1.0</p><span>$40</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="40"><img src="imgs/pillow11.png"><p>PEACE PILLOW 2.0</p><span>$40</span><span>Add to cart</span></div>
+                    <div class="item3 item four columns" id="40"><img src="imgs/pillow12.png"><p>PEACE PILLOW 3.0</p><span>$40</span><span>Add to cart</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="product-detail twelve columns">
+            <div class="item twelve columns" id="itemMattress">
+                <div class="upper twelve columns">
+                    <div class="left six columns">
+                        <div class="bigdemo twelve columns">
+                            <img src="imgs/smalldemo1.png">
+                        </div>
+                        <div class="smalldemos-area twelve columns">
+                            <span class="prev">	&lt;</span>
+                            <img src="imgs/smalldemo1.png" class="smalldemos">
+                            <img src="imgs/smalldemo2.png" class="smalldemos">
+                            <img src="imgs/smalldemo3.png" class="smalldemos">
+                            <span class="next">	&gt;</span>
+                        </div>
+                    </div>
+                    <div class="right six columns">
+                        <div class="text">
+                            <p class="bold">STANDARD MATTRESS</p>
+                            <p><span class="bold">$300-400</span><span class="italic">Status: In stock</span></p>
+                            <div class="size">
+                               <span>Size: </span>
+                                <select name="" id="">
+                                    <option value="">62x80x8”</option>
+                                    <option value="">62x80x8”</option>
+                                    <option value="">72x85x8”</option>
+                                </select>
+                            </div>
+                            <div class="minusplus">
+                                <span>Quantity: </span>
+                                <span class="symbols" onclick="add(-1,0)">&#45;</span>
+                                <span class="amount-number">0</span>
+                                <span class="symbols" onclick="add(1,0)">&#43;</span>
+                            </div>
+                            <p>Designer: Tamara Ralph</p>
+                            <span class="addtocart">Add to cart</span> <span class="addtowishlist">+ Add to wishlist</span>
+                            <hr>
+                            <p>DESCRIPTION</p>
+                            <p>Peace is minimalism at its best: visually understated, functionally exceptional. Its double hemstitch creates an elegant, clean frame from extra- long- staple cotton. Its super soft, yet crisp hand comes from an innovative finishing technique that other fabrics envy.</p>
+                            <hr>
+                            <p>DETAIL</p>
+                            <p>- Made with 100-percent polyester. <br>5.9 oz per square yard  hypoallergenic polyester filling in comforter and decorative pillows. <br>- Ultra soft all over silver metallic small triangle print comforter set. <br>- Machine washable for easy care
+                            </p>
+                            <hr>
+                            <p>CARE</p>
+                            <p>Protection from liquid spills <br>
+                                Keep it without dust / dirt <br>
+                                Rotate and rotate periodically <br>
+                                Avoid sitting on the edges
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="collection" class="container">
+        <div class="demoimg">
+            <img src="imgs/collection-demoimg1.png" onclick="openCollectionDetails(0)" width="100%">
+            <img src="imgs/collection-demoimg2.png" onclick="openCollectionDetails(1)" width="100%">
+            <img src="imgs/collection-demoimg3.png" onclick="openCollectionDetails(2)" width="100%">
+        </div>
+        <div class="details twelve columns">
+            <img src="imgs/collection-demoimg1.png" width="100%">
+            <div class="upper twelve columns">
+                <div class="text six columns">
+                    <p class="bold">PEACE COLLECTION</p>
+                    <p><span class="bold">$145</span><span class="italic">Status: In stock</span></p>
+                    <div class="minusplus">
+                        <span>Quantity: </span>
+                        <span class="symbols" onclick="add(-1,0)">&#45;</span>
+                        <span class="amount-number">0</span>
+                        <span class="symbols" onclick="add(1,0)">&#43;</span>
+                    </div>
+                    <p>Designer: Tamara Ralph</p>
+                    <span class="addtocart">Add to cart</span> <span class="addtowishlist">+ Add to wishlist</span>
+                    <hr>
+                    <p>DESCRIPTION</p>
+                    <p>Peace is minimalism at its best: visually understated, functionally exceptional. Its double hemstitch creates an elegant, clean frame from extra- long- staple cotton. Its super soft, yet crisp hand comes from an innovative finishing technique that other fabrics envy.</p>
+                    <hr>
+                    <p>DETAIL</p>
+                    <p>- Made with 100-percent polyester. <br>5.9 oz per square yard  hypoallergenic polyester filling in comforter and decorative pillows. <br>- Ultra soft all over silver metallic small triangle print comforter set. <br>- Machine washable for easy care
+                        </p>
+                </div>
+                <div class="img six columns"><img src="imgs/collection-detail3.png"></div>
+            </div>
+            <div class="imgbottom twelve columns">
+                <div class="six columns"><img src="imgs/collection-detail1.png"></div>
+                <div class="six columns"><img src="imgs/collection-detail2.png"></div>
+            </div>
+            <div class="collection-components twelve columns">COLLECTION COMPONENTS</div>
+            <div class="collection-components-img twelve columns">
+                <div class="twelve columns">
+                    <div class="four columns"><img src="imgs/collection-component1.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component2.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component3.png"></div>
+                </div>
+                <div class="twelve columns">
+                    <div class="four columns"><img src="imgs/collection-component4.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component5.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component6.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="details twelve columns">
+            <img src="imgs/collection-demoimg3.png" width="100%">
+            <div class="upper twelve columns">
+                <div class="text six columns">
+                    <p class="bold">AYESHA COLLECTION</p>
+                    <p><span class="bold">$145</span><span class="italic">Status: In stock</span></p>
+                    <div class="minusplus">
+                        <span>Quantity: </span>
+                        <span class="symbols" onclick="add(-1,0)">&#45;</span>
+                        <span class="amount-number">0</span>
+                        <span class="symbols" onclick="add(1,0)">&#43;</span>
+                    </div>
+                    <p>Designer: Tamara Ralph</p>
+                    <span class="addtocart">Add to cart</span> <span class="addtowishlist">+ Add to wishlist</span>
+                    <hr>
+                    <p>DESCRIPTION</p>
+                    <p>Peace is minimalism at its best: visually understated, functionally exceptional. Its double hemstitch creates an elegant, clean frame from extra- long- staple cotton. Its super soft, yet crisp hand comes from an innovative finishing technique that other fabrics envy.</p>
+                    <hr>
+                    <p>DETAIL</p>
+                    <p>- Made with 100-percent polyester. <br>5.9 oz per square yard  hypoallergenic polyester filling in comforter and decorative pillows. <br>- Ultra soft all over silver metallic small triangle print comforter set. <br>- Machine washable for easy care
+                        </p>
+                </div>
+                <div class="img six columns"><img src="imgs/collection-detail6.png"></div>
+            </div>
+            <div class="imgbottom twelve columns">
+                <div class="six columns"><img src="imgs/collection-detail4.png"></div>
+                <div class="six columns"><img src="imgs/collection-detail5.png"></div>
+            </div>
+            <div class="collection-components twelve columns">COLLECTION COMPONENTS</div>
+            <div class="collection-components-img twelve columns">
+                <div class="twelve columns">
+                    <div class="four columns"><img src="imgs/collection-component7.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component8.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component9.png"></div>
+                </div>
+                <div class="twelve columns">
+                    <div class="four columns"><img src="imgs/collection-component10.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component11.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component12.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="details twelve columns">
+            <img src="imgs/collection-demoimg2.png" onclick="openCollectionDetails(0)" width="100%">
+            <div class="upper twelve columns">
+                <div class="text six columns">
+                    <p class="bold">GRIS COLLECTION</p>
+                    <p><span class="bold">$145</span><span class="italic">Status: In stock</span></p>
+                    <div class="minusplus">
+                        <span>Quantity: </span>
+                        <span class="symbols" onclick="add(-1,0)">&#45;</span>
+                        <span class="amount-number">0</span>
+                        <span class="symbols" onclick="add(1,0)">&#43;</span>
+                    </div>
+                    <p>Designer: Tamara Ralph</p>
+                    <span class="addtocart">Add to cart</span> <span class="addtowishlist">+ Add to wishlist</span>
+                    <hr>
+                    <p>DESCRIPTION</p>
+                    <p>Peace is minimalism at its best: visually understated, functionally exceptional. Its double hemstitch creates an elegant, clean frame from extra- long- staple cotton. Its super soft, yet crisp hand comes from an innovative finishing technique that other fabrics envy.</p>
+                    <hr>
+                    <p>DETAIL</p>
+                    <p>- Made with 100-percent polyester. <br>5.9 oz per square yard  hypoallergenic polyester filling in comforter and decorative pillows. <br>- Ultra soft all over silver metallic small triangle print comforter set. <br>- Machine washable for easy care
+                        </p>
+                </div>
+                <div class="img six columns"><img src="imgs/collection-detail9.png"></div>
+            </div>
+            <div class="imgbottom twelve columns">
+                <div class="six columns"><img src="imgs/collection-detail7.png"></div>
+                <div class="six columns"><img src="imgs/collection-detail8.png"></div>
+            </div>
+            <div class="collection-components twelve columns">COLLECTION COMPONENTS</div>
+            <div class="collection-components-img twelve columns">
+                <div class="twelve columns">
+                    <div class="four columns"><img src="imgs/collection-component13.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component14.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component15.png"></div>
+                </div>
+                <div class="twelve columns">
+                    <div class="four columns"><img src="imgs/collection-component16.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component17.png"></div>
+                    <div class="four columns"><img src="imgs/collection-component18.png"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content container">
+            <div class="item three columns">
+                <p>About Us</p>
+                <a href="#">Our Inspiration</a> <br>
+                <a href="#">Our Vision &amp; Mission</a> <br>
+                <a href="#">Our guarantee</a> <br>
+                <a href="#">Designers</a> <br>
+            </div>
+            <div class="item three columns">
+                <p>Showrooms</p> 
+                <a href="#">Hanoi</a> <br>
+                <a href="#">Ho Chi Minh City</a> <br>
+                <a href="#">Nha Trang</a> <br>
+                <a href="#">Hue</a> <br>
+            </div>
+            <div class="item six columns">
+                <p>Contact Us</p>
+                <div class="address">
+                    <span><img src="imgs/hotline.svg"> Hotline: 0954.545.454</span>
+                    <span><img src="imgs/email.svg"> Email: danshari.co@gmail.com</span>
+                </div>
+                <div class="social">
+                    <a href=""><img src="imgs/social1.svg"></a>
+                    <a href=""><img src="imgs/social2.svg"></a>
+                    <a href=""><img src="imgs/social3.svg"></a>
+                    <a href=""><img src="imgs/social4.svg"></a>
+                    <a href=""><img src="imgs/social5.svg"></a>
+                    <a href=""><img src="imgs/social6.svg"></a>
+                </div>
+            </div>
+            <div class="copyright">Copyright &copy; 2019 - Danshari - All Rights Reserved.</div>
+        </div>
+
+    </footer>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="css/slick/slick.min.js"></script>
+    <script>
+        function searchbar() {
+            document.getElementById("search-button").classList.toggle("search-button-active");
+            document.getElementsByClassName("search-bar")[0].classList.toggle("search-bar-active");
+        }
+
+        function borderimgMouseover(a) {
+            document.getElementsByClassName("onblurimg")[a].classList.add("onblurimg-active");
+            document.getElementsByClassName("overlay")[a].classList.add("overlay-active");
+        }
+
+        function borderimgMouseout(a) {
+            document.getElementsByClassName("onblurimg")[a].classList.remove("onblurimg-active");
+            document.getElementsByClassName("overlay")[a].classList.remove("overlay-active");
+        }
+        $('.designedbyGalleryContainer').slick({
+              infinite: true,
+              slidesToShow: 4,
+              slidesToScroll: 1
+            });
+        $(document).ready(function() {
+            $('.gallery').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true,
+            });
+        });
+        $(document).ready(function() {
+            $('.upcoming-container').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+            });
+        });
+        var landing = document.getElementsByClassName("landing");
+
+        function openLogin() {
+            var i = 0;
+            for (i = 0; i < landing.length; i++) {
+                landing[i].style.display = "none";
+            }
+            document.getElementById("login").style.display = "block";
+            document.getElementById("register").style.display = "none";
+            document.getElementById("showroom-map").style.display = "none";
+            document.getElementById("HanoiShowroom").style.display = "none";
+            document.getElementById("myCart").style.display = "none";
+        }
+
+        function openRegister() {
+            var i = 0;
+            for (i = 0; i < landing.length; i++) {
+                landing[i].style.display = "none";
+            }
+            document.getElementById("register").style.display = "block";
+            document.getElementById("login").style.display = "none";
+            document.getElementById("showroom-map").style.display = "none";
+            document.getElementById("HanoiShowroom").style.display = "none";
+            document.getElementById("myCart").style.display = "none";
+        }
+
+        var notShowroomMap = document.querySelectorAll("section:not(#showroom-map):not(#nav)");
+
+        function openShowroomMap() {
+            var i = 0;
+            for (i = 0; i < notShowroomMap.length; i++) {
+                notShowroomMap[i].style.display = "none";
+            }
+            document.getElementById("showroom-map").style.display = "block";
+        }
+
+        var notHanoiShowroom = document.querySelectorAll("section:not(#HanoiShowroom):not(#nav)");
+
+        function openHanoiShowroom() {
+            var i = 0;
+            for (i = 0; i < notHanoiShowroom.length; i++) {
+                notHanoiShowroom[i].style.display = "none";
+            }
+            document.getElementById("HanoiShowroom").style.display = "block";
+        }
+
+        var notMyCart = document.querySelectorAll("section:not(#myCart):not(#nav)");
+
+        function openMyCart() {
+            var i = 0;
+            for (i = 0; i < notMyCart.length; i++) {
+                notMyCart[i].style.display = "none";
+            }
+            document.getElementById("myCart").style.display = "block";
+        }
+
+        function add(c, index) {
+            var amountNumber = document.getElementsByClassName("amount-number");
+            amountNumber[index].innerHTML = parseInt(amountNumber[index].innerHTML) + c;
+        }
+
+        function deleteItem(item) {
+            document.getElementsByClassName("previewitem")[item].style.display = "none";
+        }
+
+        function openCheckout1() {
+            document.getElementById("checkout1").style.display = "block";
+            document.getElementById("myCart").style.display = "none";
+        }
+
+        function openCheckout2() {
+            document.getElementById("checkout2").style.display = "block";
+            document.getElementById("checkout1").style.display = "none";
+        }
+
+        var notAboutUs = document.querySelectorAll("section:not(#aboutus):not(#nav)");
+        
+        function openAboutUs() {
+            var i = 0;
+            for (i = 0; i < notAboutUs.length; i++) {
+                notAboutUs[i].style.display = "none";
+            }
+            document.getElementById("aboutus").style.display = "block";
+            document.getElementById("ourStory").style.display = "block";
+            document.getElementsByClassName("switch-btn")[0].style.opacity = 1;
+            document.getElementById("designers").style.display = "none";
+        }
+        
+        function openDesigners() {
+            for (i = 0; i < notAboutUs.length; i++) {
+                notAboutUs[i].style.display = "none";
+            }
+            document.getElementById("ourStory").style.display = "none";
+            document.getElementById("designers").style.display = "block";
+            document.getElementsByClassName("switch-btn")[2].style.opacity = 0.5;
+            document.getElementsByClassName("switch-btn")[3].style.opacity = 1;
+        }
+        
+        function openOurStory() {
+            for (i = 0; i < notAboutUs.length; i++) {
+                notAboutUs[i].style.display = "none";
+            }
+            document.getElementById("ourStory").style.display = "block";
+            document.getElementById("designers").style.display = "none";
+            document.getElementsByClassName("switch-btn")[0].style.opacity = 1;
+            document.getElementsByClassName("switch-btn")[1].style.opacity = 0.5;
+        }
+        
+        function openProfileDetails(d) {
+            var i = 0;
+            var profiles = document.getElementsByClassName("profile");
+            var profilepic = document.querySelectorAll(".profilepic .item div");
+            for (i = 0; i < profiles.length; i++) {
+                profiles[i].style.display = "none";
+                profilepic[i].style.border = "2px solid #d1d1d1";
+            }
+            profiles[d].style.display = "block";
+            profilepic[d].style.border = "2px solid #F68B1F";
+        }
+        
+        var slider1 = document.getElementById("slider1");
+        var responsivePrice1 = document.getElementById("responsivePrice1");
+        responsivePrice1.innerHTML = "$" + slider1.value;
+        slider1.oninput = function() {
+            responsivePrice1.innerHTML = "$" + this.value;
+            var i = 0;
+            var item1 = document.querySelectorAll("#demos1 .item1");
+            for (i = 0; i < item1.length; i++) {
+                item1[i].style.opacity = "0";
+                var itemId = item1[i].id;
+                if (itemId < this.value) {
+                    item1[i].style.opacity = "1";
+                }
+            }
+        }
+        
+        
+        var slider2 = document.getElementById("slider2");
+        var responsivePrice2 = document.getElementById("responsivePrice2");
+        responsivePrice2.innerHTML = "$" + slider2.value;
+        slider2.oninput = function() {
+            responsivePrice2.innerHTML = "$" + this.value;
+            var i = 0;
+            var item2 = document.querySelectorAll("#demos2 .item2");
+            for (i = 0; i < item2.length; i++) {
+                item2[i].style.opacity = "0";
+                var itemId = item2[i].id;
+                if (itemId < this.value) {
+                    item2[i].style.opacity = "1";
+                }
+            }
+        }
+        
+        
+        
+        
+        var slider3 = document.getElementById("slider3");
+        var responsivePrice3 = document.getElementById("responsivePrice3");
+        responsivePrice3.innerHTML = "$" + slider3.value;
+        slider3.oninput = function() {
+            responsivePrice3.innerHTML = "$" + this.value;
+            var i = 0;
+            var item3 = document.querySelectorAll("#demos3 .item3");
+            for (i = 0; i < item3.length; i++) {
+                item3[i].style.opacity = "0";
+                var itemId = item3[i].id;
+                if (itemId < this.value) {
+                    item3[i].style.opacity = "1";
+                }
+            }
+        }
+        
+        var notProduct = document.querySelectorAll("section:not(#product):not(#nav)");
+        
+        function openCategoryContent(f) {
+            var categoryA = document.querySelectorAll(".category .filter .categoryA");
+            var category = document.getElementsByClassName("category");
+            var i = 0;
+            for (i = 0; i < category.length; i++) {
+                category[i].style.display = "none";
+                categoryA[i].style.color = "black";
+            }
+            for (i = 0; i < notProduct.length; i++) {
+                notProduct[i].style.display = "none";
+            }
+            document.getElementById("product").style.display = "block";
+            
+            category[f].style.display = "block";
+            this.style.color = "#F68B1F";
+        }
+        
+        
+        
+        function openProduct() {
+            var i = 0;
+            for (i = 0; i < notProduct.length; i++) {
+                notProduct[i].style.display = "none";
+            }
+            document.getElementById("product").style.display = "block";
+            document.getElementsByClassName("category")[0].style.display = "block";
+        }
+        
+        var notCollection = document.querySelectorAll("section:not(#collection):not(#nav)");
+        function openCollection() {
+            var i = 0;
+            for (i = 0; i < notCollection.length; i++) {
+                notCollection[i].style.display = "none";
+            }
+            document.getElementById("collection").style.display = "block";
+        }
+        
+        
+        
+        
+        function openCollectionDetails(g) {
+            var details = document.querySelectorAll("#collection .details");
+            var i = 0;
+            for (i = 0; i < details.length; i++) {
+                details[i].style.display = "none";
+                document.querySelectorAll("#collection .demoimg img")[i].style.display = "none";
+            }
+            details[g].style.display = "block";
+        }
+        
+        
+        var bigDemo = document.querySelector(".bigdemo img");
+        var smallDemos = document.querySelectorAll(".smalldemos");
+        smallDemos.forEach(smalldemos => smalldemos.addEventListener('click', function() {
+            bigDemo.src = this.src;
+        }));
+        
+        
+        function openProductDetail(h) {
+            var productDetailItem = document.querySelectorAll(".product-detail .item");
+            var i = 0;
+            for (i = 0; i < productDetailItem.length; i++) {
+                productDetailItem[i].style.display = "none";
+                document.getElementsByClassName("category")[i].style.display = "none";
+            }
+            productDetailItem[h].style.display = "block";
+        }
+        
+    </script>
+</body>
+</html>
