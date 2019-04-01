@@ -96,7 +96,7 @@ html {
 
     .content {
         z-index: 2;
-        margin-top: 200px;
+        margin-top: 20vh;
 
         .logo {
             opacity: 0.95;
@@ -342,23 +342,24 @@ html {
     .right {
         padding: 100px 3%;
         .col {
-            width: 50%;
+            width: 100%;
             float: left;
             padding: 0px 5% 50px 5%;
-
-            &:nth-child(3) {
-                width: 100%;
+            
+            &:nth-child(1) {
+                svg {
+                    width: 30px;
+                }
             }
             &:nth-child(4), &:nth-child(5) {
-                width: 100%;
                 svg { width: 40px; }
                 li { display: block; text-align: left }
             }
             &:nth-child(6) {
-                width: 100%; 
                 li {
                     display: inline-block;
                     text-align: left;
+                    margin: 10px 0 10px 0;
                 }
             }
 
