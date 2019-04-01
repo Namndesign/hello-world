@@ -1,0 +1,444 @@
+@font-face {
+    font-family: GothamPro;
+    src: url(../assets/fonts/GothamPro.woff);
+}
+
+@font-face {
+    font-family: GothamProBold;
+    src: url(../assets/fonts/GothamPro-Bold.woff);
+}
+
+@font-face {
+    font-family: HaloHandletter;
+    src: url(../assets/fonts/HaloHandletter.woff);
+}
+
+$yellow: #FFB600;
+$bgred: #e74c3c;
+$bgyellow: #f39c12;
+$bgcoal: #34495e;
+$bggreen: #16a085;
+
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#loading {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #141414;
+    transition: 1s;
+
+    .loading-wrapper {
+        color: white;
+        font-family: monospace;
+        font-size: 30px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 20ch;
+            display: inline-block;
+            animation: typing 2s forwards steps(15);
+        }
+
+        @keyframes typing {
+            from {
+                width: 0ch
+            }
+
+            to {
+                width: 15ch
+            }
+        }
+    }
+}
+
+.fade-loading {
+    opacity: 0;
+}
+
+#hero {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../assets/img/hero-bg.svg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100vw;
+        height: 100vh;
+        content: '';
+    }
+
+    .content {
+        z-index: 2;
+        margin-top: 200px;
+
+        .logo {
+            opacity: 0.95;
+        }
+
+        .text {
+            color: aliceblue;
+            font-family: GothamProBold;
+
+            h5 {
+                font-size: 3em
+            }
+
+            h1 {
+                font-size: 6em
+            }
+
+            h6 {
+                font-size: 2em
+            }
+
+            .level-title,
+            .level-content {
+                display: inline-block;
+                float: left;
+                margin-right: 20px;
+
+                .level-faded {
+                    opacity: 0.2;
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+        .social-media {
+            color: white;
+            font-family: GothamProBold;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 100px;
+
+            .social-link {
+                color: white;
+                cursor: pointer;
+                font-size: 2em;
+                position: relative;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                border-radius: 50%;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: -7px;
+                    left: -7px;
+                    border-radius: 50%;
+                    transition: 0.2s;
+                }
+
+                &:hover::before {
+                    width: 60px;
+                    height: 60px;
+                    border: 2px solid $yellow;
+                }
+
+                &:focus {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+#about,
+#work,
+#gear,
+#contact {
+    position: relative;
+    width: 100%;
+    display: flex;
+    font-family: GothamPro;
+
+    .left,
+    .right {
+        width: 50%;
+    }
+
+    .left {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        h1 {
+            font-family: HaloHandletter;
+            font-size: 10em
+        }
+
+        nav {
+            position: absolute;
+            bottom: 100px;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .right {
+        padding: 100px;
+        box-shadow: -2px 0px 4px 0px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+    }
+}
+
+#about {
+    .left {
+        background-color: $bgred
+    }
+
+    .right {
+        h6 {
+            font-size: 20px;
+        }
+
+        h4 {
+            padding: 40px 0 0 0
+        }
+
+        .number {
+            color: $bgred
+        }
+
+        .paralist {
+            padding-left: 30px
+        }
+
+        ul {
+            padding-left: 40px
+        }
+
+        p {
+            line-height: 2.5
+        }
+    }
+}
+
+#work {
+    .left {
+        background-color: $bgyellow;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .right {
+        padding: 0;
+        transition: 0.5s;
+        .items {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                position: absolute;
+            }
+            svg {
+                margin-top: 400px;
+                margin-left: 50%;
+                margin-bottom: 0;
+                transform: translate(-50%,-50%);
+                width: 300px;
+                cursor: pointer;
+                transition: 0.5s;
+                border: 10px solid transparent ;
+                &:hover {
+                    border: 10px solid rgba(0,0,0,0.2);
+                }
+            }
+            &:nth-child(1) {
+                background: url(../assets/img/work-item1.jpg) no-repeat center top / auto 100%;
+                &:hover { background-size: auto 110%; transition: all 5s ease }
+            }
+            &:nth-child(2) {
+                background: url(../assets/img/work-item2.jpg) no-repeat center top / auto 100%;
+                &:hover { background-size: auto 110%; transition: all 5s ease }
+            }
+            &:nth-child(3) {
+                background: url(../assets/img/work-item3.jpg) no-repeat center left / auto 100%;
+                &:hover { background-size: auto 110%; transition: all 5s ease }
+            }
+            .text {
+                color: white;
+                text-align: center;
+                z-index: 999;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%,0);
+                transition: 1s;
+                opacity: 0;
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    border: 1px solid white;
+                    width: 200px;
+                    height: 50px;
+                    line-height: 50px;
+                    text-transform: uppercase;
+                    color: white;
+                    border-radius: 3px;
+                    font-family: GothamProBold;
+                    &:hover {
+                        border-color: $yellow;
+                    }
+                    &:focus {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#gear {
+    .left {
+        background-color: $bgcoal
+    }
+
+    .right {
+        padding: 100px 3%;
+        .col {
+            width: 50%;
+            float: left;
+            padding: 0px 5% 50px 5%;
+
+            &:nth-child(3) {
+                width: 100%;
+            }
+            &:nth-child(4), &:nth-child(5) {
+                width: 100%;
+                svg { width: 40px; }
+                li { display: block; text-align: left }
+            }
+            &:nth-child(6) {
+                width: 100%; 
+                li {
+                    display: inline-block;
+                    text-align: left;
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                i {
+                    font-size: 40px
+                }
+
+                li {
+                    display: inline-block;
+                    text-align: center;
+                    padding: 0 20px;
+
+                    svg {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#contact {
+    .left {
+        background-color: $bggreen;
+    }
+    .right {
+        p { i { font-size: 1.5em }}
+        .social-media-bottom {
+            a {
+                color: black;
+                font-size: 2em;
+                padding: 20px 20px 20px 0;
+            }
+        }
+    }
+}
+
+
+#ending {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #101010;
+    text-align: center;
+    color: white;
+    position: relative;
+    h1 { font-family: HaloHandletter; font-size: 8em; margin-top: 1vh; }
+    #Layer_1 {
+        width: 10%;
+        margin-top: 20vh;
+    }
+    p {
+        letter-spacing: 1px;
+        font-family: GothamProBold;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        bottom: 5vh;
+        i { color: $bgred }
+    }
+    nav {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        bottom: 4vh;
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 1px 5px;
+            border-radius: 2px;
+            transition: 0.1s;
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+
