@@ -194,8 +194,9 @@ html {
         top: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        padding-top: 150px;
         color: white;
 
         h1 {
@@ -277,9 +278,8 @@ html {
                 position: absolute;
             }
             svg {
-                margin-top: 400px;
+                margin-top: 300px;
                 margin-left: 50%;
-                margin-bottom: 0;
                 transform: translate(-50%,-50%);
                 width: 300px;
                 cursor: pointer;
@@ -287,14 +287,15 @@ html {
                 border: 10px solid transparent ;
                 &:hover {
                     border: 10px solid rgba(0,0,0,0.2);
+                    background-color: rgba(0,0,0,0.4);
                 }
             }
             &:nth-child(1) {
-                background: url(../assets/img/work-item1.jpg) no-repeat center top / auto 100%;
+                background: url(../assets/img/work-item1.jpg) no-repeat center left / auto 100%;
                 &:hover { background-size: auto 110%; transition: all 5s ease }
             }
             &:nth-child(2) {
-                background: url(../assets/img/work-item2.jpg) no-repeat center top / auto 100%;
+                background: url(../assets/img/work-item2.jpg) no-repeat center left / auto 100%;
                 &:hover { background-size: auto 110%; transition: all 5s ease }
             }
             &:nth-child(3) {
@@ -307,6 +308,7 @@ html {
                 z-index: 999;
                 position: absolute;
                 left: 50%;
+                top: 50%;
                 transform: translate(-50%,0);
                 transition: 1s;
                 opacity: 0;
@@ -344,7 +346,7 @@ html {
         .col {
             width: 100%;
             float: left;
-            padding: 0px 5% 50px 5%;
+            padding: 0px 1vw 0 3vw;
             
             &:nth-child(1) {
                 svg {
@@ -410,9 +412,13 @@ html {
     color: white;
     position: relative;
     h1 { font-family: HaloHandletter; font-size: 8em; margin-top: 1vh; }
+    
     #Layer_1 {
         width: 10%;
         margin-top: 20vh;
+        #theeye {
+            
+        }
     }
     p {
         letter-spacing: 1px;
@@ -421,7 +427,23 @@ html {
         left: 50%;
         transform: translate(-50%,0);
         bottom: 5vh;
-        i { color: $bgred }
+        i { color: $bgred; position: relative;
+            &::after {
+                content: '';
+                color: $bgred;
+                position: absolute;
+                left: 0;
+                top: 0;
+                animation: heartPulse 1s infinite;
+                transform-origin: center bottom;
+            }
+            @keyframes heartPulse {
+                100% {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        }
     }
     nav {
         position: absolute;
