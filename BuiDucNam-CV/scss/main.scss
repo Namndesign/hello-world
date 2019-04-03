@@ -22,6 +22,7 @@ $bggreen: #16a085;
 
 * {
     box-sizing: border-box;
+    transition: 0.2s;
 }
 
 ::-webkit-scrollbar {
@@ -207,6 +208,8 @@ html {
         nav {
             position: absolute;
             bottom: 100px;
+            width: 100%;
+            text-align: center;
 
             a {
                 color: white;
@@ -264,44 +267,63 @@ html {
     .right {
         padding: 0;
         transition: 0.5s;
+
         .items {
             height: 100vh;
             width: 100%;
             overflow: hidden;
             position: relative;
-            
+
             &::before {
                 content: '';
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0,0,0,0.5);
+                background-color: rgba(0, 0, 0, 0.5);
                 position: absolute;
             }
+
             svg {
                 margin-top: 300px;
                 margin-left: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 width: 300px;
                 cursor: pointer;
                 transition: 0.5s;
-                border: 10px solid transparent ;
+                border: 10px solid transparent;
+
                 &:hover {
-                    border: 10px solid rgba(0,0,0,0.2);
-                    background-color: rgba(0,0,0,0.4);
+                    border: 10px solid rgba(0, 0, 0, 0.2);
+                    background-color: rgba(0, 0, 0, 0.4);
                 }
             }
+
             &:nth-child(1) {
                 background: url(../assets/img/work-item1.jpg) no-repeat center left / auto 100%;
-                &:hover { background-size: auto 110%; transition: all 5s ease }
+
+                &:hover {
+                    background-size: auto 110%;
+                    transition: all 5s ease
+                }
             }
+
             &:nth-child(2) {
                 background: url(../assets/img/work-item2.jpg) no-repeat center left / auto 100%;
-                &:hover { background-size: auto 110%; transition: all 5s ease }
+
+                &:hover {
+                    background-size: auto 110%;
+                    transition: all 5s ease
+                }
             }
+
             &:nth-child(3) {
                 background: url(../assets/img/work-item3.jpg) no-repeat center left / auto 100%;
-                &:hover { background-size: auto 110%; transition: all 5s ease }
+
+                &:hover {
+                    background-size: auto 110%;
+                    transition: all 5s ease
+                }
             }
+
             .text {
                 color: white;
                 text-align: center;
@@ -309,9 +331,10 @@ html {
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%,0);
+                transform: translate(-50%, 0);
                 transition: 1s;
                 opacity: 0;
+
                 a {
                     text-decoration: none;
                     display: inline-block;
@@ -323,9 +346,11 @@ html {
                     color: white;
                     border-radius: 3px;
                     font-family: GothamProBold;
+
                     &:hover {
                         border-color: $yellow;
                     }
+
                     &:focus {
                         background-color: white;
                         color: black;
@@ -343,20 +368,30 @@ html {
 
     .right {
         padding: 100px 3%;
+
         .col {
             width: 100%;
             float: left;
             padding: 0px 1vw 0 3vw;
-            
+
             &:nth-child(1) {
                 svg {
                     width: 30px;
                 }
             }
-            &:nth-child(4), &:nth-child(5) {
-                svg { width: 40px; }
-                li { display: block; text-align: left }
+
+            &:nth-child(4),
+            &:nth-child(5) {
+                svg {
+                    width: 40px;
+                }
+
+                li {
+                    display: block;
+                    text-align: left
+                }
             }
+
             &:nth-child(6) {
                 li {
                     display: inline-block;
@@ -390,8 +425,14 @@ html {
     .left {
         background-color: $bggreen;
     }
+
     .right {
-        p { i { font-size: 1.5em }}
+        p {
+            i {
+                font-size: 1.5em
+            }
+        }
+
         .social-media-bottom {
             a {
                 color: black;
@@ -402,7 +443,6 @@ html {
     }
 }
 
-
 #ending {
     width: 100vw;
     height: 100vh;
@@ -411,23 +451,32 @@ html {
     text-align: center;
     color: white;
     position: relative;
-    h1 { font-family: HaloHandletter; font-size: 8em; margin-top: 1vh; }
-    
+
+    h1 {
+        font-family: HaloHandletter;
+        font-size: 8em;
+        margin-top: 1vh;
+    }
+
     #Layer_1 {
         width: 10%;
         margin-top: 20vh;
-        #theeye {
-            
-        }
+
+        #theeye {}
     }
+
     p {
         letter-spacing: 1px;
         font-family: GothamProBold;
         position: absolute;
         left: 50%;
-        transform: translate(-50%,0);
+        transform: translate(-50%, 0);
         bottom: 5vh;
-        i { color: $bgred; position: relative;
+
+        i {
+            color: $bgred;
+            position: relative;
+
             &::after {
                 content: '';
                 color: $bgred;
@@ -437,6 +486,7 @@ html {
                 animation: heartPulse 1s infinite;
                 transform-origin: center bottom;
             }
+
             @keyframes heartPulse {
                 100% {
                     transform: scale(2);
@@ -445,11 +495,13 @@ html {
             }
         }
     }
+
     nav {
         position: absolute;
         left: 50%;
-        transform: translate(-50%,0);
+        transform: translate(-50%, 0);
         bottom: 4vh;
+
         a {
             color: white;
             text-decoration: none;
@@ -457,6 +509,7 @@ html {
             padding: 1px 5px;
             border-radius: 2px;
             transition: 0.1s;
+
             &:hover {
                 background-color: white;
                 color: black;
@@ -465,3 +518,127 @@ html {
     }
 }
 
+@media only screen and (max-width: 480px) {
+
+    #about,
+    #work,
+    #gear,
+    #contact {
+        position: relative;
+        flex-wrap: wrap;
+
+        .left,
+        .right {
+            width: 100%;
+        }
+
+        .left {
+            height: 500px;
+            display: flex;
+            position: relative;
+
+            h1 {
+                font-family: HaloHandletter;
+                font-size: 20vw;
+            }
+
+        }
+
+        .right {
+            padding: 50px;
+            box-shadow: none;
+        }
+    }
+
+    #hero {
+        height: auto;
+
+        &::before {
+            height: 100%;
+            content: '';
+        }
+
+        .content {
+            z-index: 2;
+            margin-top: 50px;
+            margin-left: 5vw;
+
+            .logo {
+                opacity: 0.95;
+                width: 30vw;
+            }
+
+            .text {
+
+                h5 {
+                    font-size: 3em
+                }
+
+                h1 {
+                    font-size: 6em
+                }
+
+                h6 {
+                    font-size: 2em
+                }
+
+                .level-title,
+                .level-content {
+                    display: block;
+                }
+            }
+
+            .social-media {
+                justify-content: flex-start;
+
+            }
+        }
+    }
+
+    #work {
+        .right {
+            padding: 0;
+
+            .items {
+                height: 100vh;
+                width: 100%;
+
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                }
+
+                svg {
+                    margin-top: 200px;
+                    width: 200px;
+                }
+            }
+        }
+    }
+    
+    #ending {
+
+    h1 {
+        font-family: HaloHandletter;
+        font-size: 8em;
+        margin-top: 50px;
+    }
+
+    #Layer_1 {
+        width: 50%;
+        margin-top: 70px;
+    }
+
+    p {
+        bottom: 90px;
+    }
+
+    nav {
+        bottom: 30px;
+        width: 100%;
+    }
+}
+}
