@@ -339,7 +339,7 @@ html {
     #gear .right .col:nth-child(1) svg {
       width: 30px; }
     #gear .right .col:nth-child(4) svg, #gear .right .col:nth-child(5) svg {
-      width: 40px; }
+      width: 50px; }
     #gear .right .col:nth-child(4) li, #gear .right .col:nth-child(5) li {
       display: block;
       text-align: left; }
