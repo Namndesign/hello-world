@@ -1,8 +1,8 @@
-window.addEventListener('load', function() {
-   setTimeout(function() {
-       document.getElementById("loading").className += " fade-loading";
-       document.getElementById("loading").style.zIndex = -1;
-   }, 3000) 
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        document.getElementById("loading").className += " fade-loading";
+        document.getElementById("loading").style.zIndex = -1;
+    }, 3000)
 });
 
 var workRight = document.querySelector("#work .right");
@@ -26,7 +26,7 @@ function workOpen() {
 function workClose() {
     workRight.style.width = "50%";
     workLeft.style.width = "50%";
-    for(i = 0; i < workRightButton.length; i++) {
+    for (i = 0; i < workRightButton.length; i++) {
         workRightButton[i].style.marginTop = "300px";
         workRightButton[i].nextElementSibling.style.opacity = 0;
     }
@@ -34,8 +34,28 @@ function workClose() {
 
 var eyeBall = document.getElementById("theeye");
 var endingScene = document.getElementById("ending");
-endingScene.addEventListener('mousemove', function(e) {
+endingScene.addEventListener('mousemove', function (e) {
     var x = e.clientX / window.innerWidth * 100 - 50 + "px";
     var y = e.clientY / window.innerHeight * 100 - 50 + "px";
     eyeBall.style.transform = "translate(" + x + "," + y + ")";
 })
+
+
+function removeWorkEffect(x) {
+    if (x.matches) {
+        for (i = 0; i < workRightButton.length; i++) {
+            workRightButton[i].removeEventListener('click', workOpen);
+            workLeft.removeEventListener('click', workClose);
+        }
+    } else {
+        for (i = 0; i < workRightButton.length; i++) {
+            workRightButton[i].addEventListener('click', workOpen);
+            workLeft.addEventListener('click', workClose);
+        }
+    }
+    
+}
+
+var x = window.matchMedia("(max-width: 600px)");
+removeWorkEffect(x);
+x.addListener(removeWorkEffect);

@@ -22,7 +22,7 @@ $bggreen: #16a085;
 
 * {
     box-sizing: border-box;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 ::-webkit-scrollbar {
@@ -215,6 +215,9 @@ html {
                 color: white;
                 text-decoration: none;
             }
+        }
+        p {
+            text-align: center;
         }
     }
 
@@ -434,6 +437,7 @@ html {
         }
 
         .social-media-bottom {
+            
             a {
                 color: black;
                 font-size: 2em;
@@ -518,8 +522,14 @@ html {
     }
 }
 
-@media screen and (max-width: 480px) {
-    
+@media screen and (max-width: 600px) {
+
+    #loading {
+        .loading-wrapper {
+            font-size: 20px;
+        }
+    }
+
     #about,
     #work,
     #gear,
@@ -545,7 +555,7 @@ html {
         }
 
         .right {
-            padding: 50px;
+            padding: 5vw;
             box-shadow: none;
         }
     }
@@ -561,7 +571,6 @@ html {
         .content {
             z-index: 2;
             margin-top: 50px;
-            margin-left: 5vw;
 
             .logo {
                 opacity: 0.95;
@@ -571,15 +580,15 @@ html {
             .text {
 
                 h5 {
-                    font-size: 3em
+                    font-size: 1.5em
                 }
 
                 h1 {
-                    font-size: 6em
+                    font-size: 3em
                 }
 
                 h6 {
-                    font-size: 2em
+                    font-size: 1em
                 }
 
                 .level-title,
@@ -600,7 +609,7 @@ html {
             padding: 0;
 
             .items {
-                height: 100vh;
+                height: 50vh;
                 width: 100%;
 
                 &::before {
@@ -612,33 +621,37 @@ html {
                 }
 
                 svg {
-                    margin-top: 200px;
-                    width: 200px;
+                    margin-top: 10vh;
+                    width: 30vw;
+                }
+
+                .text {
+                    opacity: 1;
                 }
             }
         }
     }
-    
+
     #ending {
 
-    h1 {
-        font-family: HaloHandletter;
-        font-size: 8em;
-        margin-top: 50px;
-    }
+        h1 {
+            font-family: HaloHandletter;
+            font-size: 5em;
+            margin-top: 50px;
+        }
 
-    #Layer_1 {
-        width: 50%;
-        margin-top: 70px;
-    }
+        #Layer_1 {
+            width: 50%;
+            margin-top: 70px;
+        }
 
-    p {
-        bottom: 90px;
-    }
+        p {
+            bottom: 90px;
+        }
 
-    nav {
-        bottom: 30px;
-        width: 100%;
+        nav {
+            bottom: 30px;
+            width: 100%;
+        }
     }
-}
 }
